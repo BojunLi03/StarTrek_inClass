@@ -93,7 +93,7 @@ let captainOfficers = captains.map{Officer(name: $0.key, ship: $0.value)}
 
 // Q5: Alphabetize the previous list by the captain's name
 
-let sortedCaptainOfficers = captainOfficers.sorted(by: {$0.name < $1.name})
+let sortedCaptainOfficers = captainOfficers.sorted()
 
 
 /*:
