@@ -44,13 +44,13 @@ print(humanOfficerCount)
 
 // Q1: What percentage of humans are female?
 
-let femaleHumanOfficers = humanOfficers.filter { femaleOfficers.contains($0) }
-let percentageFemaleHumans = (Double(femaleHumanOfficers.count) / Double(humanOfficers.count)) * 100
+let femaleHumanOfficers = humanOfficers.filter {femaleOfficers.contains($0)}
+let percentageFemaleHumans = (Double(femaleHumanOfficers.count) / Double(humanOfficers.count))
 print(percentageFemaleHumans)
 
 // Q2: How many first officers are human?
 
-let humanFirstOfficers = firstOfficers.filter { humanOfficers.contains($0.key) }
+let humanFirstOfficers = firstOfficers.filter {humanOfficers.contains($0.key)}
 let humanFirstOfficerCount = humanFirstOfficers.count
 print(humanFirstOfficerCount)
 
@@ -101,9 +101,9 @@ Group 2
 */
 // Q6: Create an array of officers serving as first officers who are also Vulcan
 
-let vulcanFirstOfficers = firstOfficers.compactMap{ vulcanOfficers.contains($0.key) ? Officer(name: $0.key, ship: $0.value) : nil }
+let vulcanFirstOfficers = firstOfficers.compactMap{vulcanOfficers.contains($0.key) ? Officer(name: $0.key, ship: $0.value) : nil }
 
 // Q7: How many these Vulcan first officers have names shorter than 5 characters?
 
-let shortVulcanFirstOfficers = vulcanFirstOfficers.filter{ $0.name.count < 5 }
+let shortVulcanFirstOfficers = vulcanFirstOfficers.filter{$0.name.count < 5}
 
